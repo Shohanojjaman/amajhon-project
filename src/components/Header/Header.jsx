@@ -41,17 +41,17 @@ const Header = () => {
         <div className="hidden sm:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link className="text-lg" to="/">
+              <Link className="text-base lg:text-lg" to="/">
                 Home
               </Link>
             </li>
             <li>
-              <Link className="text-lg" to="/products">
+              <Link className="text-base lg:text-lg" to="/products">
                 Products
               </Link>
             </li>
             <li>
-              <Link className="text-lg" to="/dashboard">
+              <Link className="text-base lg:text-lg" to="/dashboard">
                 Dashboard
               </Link>
             </li>
