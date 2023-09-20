@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Layout from '../components/Layouts/Layout';
 import Home from '../components/Home/Home';
+import Layout from '../components/Layouts/Layout';
+import Products from '../components/Products/Products';
 
 const MainRoutes = createBrowserRouter([
   {
@@ -13,7 +14,13 @@ const MainRoutes = createBrowserRouter([
       },
       {
         path: '/products',
-        element: <section>Products</section>,
+        element: <Products></Products>,
+        loader: () => fetch(`https://dummyjson.com/products`),
+      },
+      {
+        path: '/products/:id',
+        element: <section>Hello</section>,
+        loader: ({ params }) => fetch(`https://dummyjson.com/products/${params.id}`),
       },
       {
         path: '/dashboard',
