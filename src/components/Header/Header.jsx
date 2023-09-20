@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import '../../index.css';
 
 const Header = () => {
   return (
@@ -22,6 +23,12 @@ const Header = () => {
           </label>
           <ul tabIndex={0} className="menu menu-sm dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52">
             <li>
+              <NavLink
+                to="/"
+                className={({ isActive, isPending }) => (isPending ? 'pending' : isActive ? 'bg-gray-400' : '')}>
+                Home
+              </NavLink>
+
               <Link className="text-lg" to="/">
                 Home
               </Link>
@@ -41,19 +48,31 @@ const Header = () => {
         <div className="hidden sm:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link className="text-base lg:text-lg" to="/">
+              <NavLink
+                to="/"
+                className={({ isActive, isPending }) =>
+                  (isPending ? 'pending' : isActive ? 'active-btn lg:text-lg' : '') || `text-base lg:text-lg`
+                }>
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link className="text-base lg:text-lg" to="/products">
+              <NavLink
+                to="/products"
+                className={({ isActive, isPending }) =>
+                  (isPending ? 'pending' : isActive ? 'active-btn lg:text-lg' : '') || `text-base lg:text-lg`
+                }>
                 Products
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link className="text-base lg:text-lg" to="/dashboard">
+              <NavLink
+                to="/dashboard"
+                className={({ isActive, isPending }) =>
+                  (isPending ? 'pending' : isActive ? 'active-btn lg:text-lg' : '') || `text-base lg:text-lg`
+                }>
                 Dashboard
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
