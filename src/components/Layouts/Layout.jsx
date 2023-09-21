@@ -4,7 +4,6 @@ import Header from '../Header/Header';
 
 const Layout = () => {
   const navigation = useNavigation();
-  console.log(navigation.state);
   return (
     <>
       <Header></Header>
