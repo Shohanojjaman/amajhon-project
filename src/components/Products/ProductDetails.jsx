@@ -7,8 +7,8 @@ const ProductDetails = () => {
   const { title, description, price, discountPercentage, rating, stock, brand, category, images } = product;
   const newPrice = price - (price * (discountPercentage / 100)).toFixed(2);
   return (
-    <div className="container mx-auto max-sm:px-5 flex gap-6 my-6">
-      <div className="w-1/2">
+    <div className="container mx-auto max-sm:px-5 flex flex-col lg:flex-row gap-6 my-6">
+      <div className="w-full lg:w-1/2">
         <div
           style={{
             paddingBottom: '30px',
@@ -78,7 +78,7 @@ const ProductDetails = () => {
           </Carousel>
         </div>
       </div>
-      <div className="w-1/2 space-y-4">
+      <div className=" w-full lg:w-1/2 space-y-4">
         <h3 className="text-4xl font-bold">{title}</h3>
         <div className="space-y-2">
           <p className="font-bold">

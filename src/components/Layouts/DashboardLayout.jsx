@@ -2,9 +2,9 @@ import { NavLink, Outlet } from 'react-router-dom';
 
 const DashboardLayout = () => {
   return (
-    <div className="container mx-auto max-sm:px-5 flex gap-6">
-      <nav>
-        <ul className="menu bg-base-200 w-56 rounded-box">
+    <div className="container mx-auto max-sm:px-5 flex flex-col md:flex-row gap-6">
+      <nav className="w-full md:w-[25%]">
+        <ul className="menu bg-base-200  rounded-box">
           <li>
             <NavLink
               to="/dashboard/profile"
@@ -25,7 +25,7 @@ const DashboardLayout = () => {
           </li>
         </ul>
       </nav>
-      <div className="min-h-screen bg-base-200 w-full rounded-box flex justify-center items-center">
+      <div className=" bg-base-200 w-full rounded-box ">
         <Outlet></Outlet>
       </div>
     </div>
