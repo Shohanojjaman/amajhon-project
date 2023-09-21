@@ -7,15 +7,6 @@ const DashboardLayout = () => {
         <ul className="menu bg-base-200 w-56 rounded-box">
           <li>
             <NavLink
-              to="/dashboard/home"
-              className={({ isActive, isPending }) =>
-                (isPending ? 'pending' : isActive ? 'active-btn lg:text-lg' : '') || `text-base lg:text-lg`
-              }>
-              Dashboard
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
               to="/dashboard/profile"
               className={({ isActive, isPending }) =>
                 (isPending ? 'pending' : isActive ? 'active-btn lg:text-lg' : '') || `text-base lg:text-lg`

@@ -4,6 +4,7 @@ import DashboardLayout from '../components/Layouts/DashboardLayout';
 import Layout from '../components/Layouts/Layout';
 import ProductDetails from '../components/Products/ProductDetails';
 import Products from '../components/Products/Products';
+import ComingSoon from '../components/ComingSoon/ComingSoon';
 
 const MainRoutes = createBrowserRouter([
   {
@@ -29,16 +30,16 @@ const MainRoutes = createBrowserRouter([
         element: <DashboardLayout></DashboardLayout>,
         children: [
           {
-            path: '/dashboard/home',
-            element: <div>Dash</div>,
+            path: '/dashboard',
+            element: <ComingSoon page={`Dashboard`}></ComingSoon>,
           },
           {
             path: '/dashboard/profile',
-            element: <div>profile</div>,
+            element: <ComingSoon page={`Profile`}></ComingSoon>,
           },
           {
             path: '/dashboard/editProfile',
-            element: <div>Edit Profile</div>,
+            element: <ComingSoon page={`Edit Profile`}></ComingSoon>,
           },
         ],
       },
